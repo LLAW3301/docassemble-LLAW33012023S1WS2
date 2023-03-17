@@ -1,0 +1,25 @@
+# This file contains the database of services
+#
+# Type this database out by hand with the students
+# We only need three records for this coding exercise.
+---
+variable name: WS2database
+use objects: True
+data:
+  - service name: Bramwell House
+    phone: 1800 800 098
+    website: https://www.salvationarmy.org.au/locations/south-australia/bramwell-house-south-australia/
+    indigenous: False
+  - service name: Kurlana Tampawardli
+    phone: 8202 5610
+    website: https://www.unitingcommunities.org/service/aboriginal-services/kurlana-tampawardli
+    indigenous: True
+  - service name: Foyer Port Adelaide
+    phone: 8447 1090
+    website: https://www.stjohnsyouthservices.org.au/services/foyer-port-adelaide/
+    indigenous: False
+  - service name: Catherine House
+    phone: 8232 2282
+    website: https://catherinehouse.org.au/
+    indigenous: False
+---

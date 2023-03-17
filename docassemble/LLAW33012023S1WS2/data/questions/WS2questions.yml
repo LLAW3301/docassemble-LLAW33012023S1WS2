@@ -1,0 +1,7 @@
+# All questions to be asked go here
+---
+question: Do you identify as Aboriginal or Torres-Strait Islander?
+fields:
+  - no label: atsi_question
+    datatype: yesnoradio
+---

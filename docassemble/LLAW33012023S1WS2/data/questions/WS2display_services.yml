@@ -1,0 +1,32 @@
+# This is where we keep the data structures and the code to
+# display only the relevant services for this app
+---
+objects:
+  - WS2display_services: DAList.using(there_are_any=True, auto_gather=False)
+---
+# Add items to WS2display_services
+code: |
+  for a_service in WS2database:
+    # The tests go here
+    
+    # Indigenous test
+    # 1. Test if the user identifies as ATSI
+    if atsi_question:
+      # If they do, then we display all services
+      indigenous_ok = True
+    else:
+      # If they don't then we only add the service if it does NOT
+      # cater for indigenous people
+      if a_service['indigenous']:
+        # The service does cater for indigenous people.  Let's exclude it
+        indigenous_ok = False
+      else:
+        # The service does not cater for indigenous people. Let's add it
+        indigenous_ok = True
+      
+    if indigenous_ok:
+      WS2display_services.append(a_service)
+  
+  # This has to be the last line in the filtering code logic
+  WS2display_services.gathered = True
+---

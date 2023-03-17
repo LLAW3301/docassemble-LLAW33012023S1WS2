@@ -1,0 +1,38 @@
+# Main Program
+---
+include:
+  - WS2database.yml
+  - WS2display_services.yml
+  - WS2questions.yml
+---
+mandatory: True
+question: Workshop 2 Service App
+subquestion: | 
+  Some text will go here eventually
+buttons:
+  - Continue: continue
+  - Exit: exit
+---
+# Code block which drives the app
+mandatory: True
+code: |
+  # Doesn't do much!
+  final_screen
+---
+event: final_screen
+question: Final Screen
+subquestion: |
+  Eventually more stuff will go in here.
+  
+  ${display_services_table}
+buttons:
+  - Exit: exit
+  - Restart: restart
+---
+table: display_services_table
+rows: WS2display_services
+columns:
+  - Name: |
+      '[{}]({})'.format(row_item['service name'], row_item['website'])
+  - Phone Number: |
+      '[{}](tel:{})'.format(row_item['phone'], row_item['phone'])
